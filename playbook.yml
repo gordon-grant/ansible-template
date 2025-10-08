@@ -1,0 +1,10 @@
+---
+- name: Do stuff on remote servers
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Ensure git is installed
+      ansible.builtin.package:
+        name: git
+        state: present
